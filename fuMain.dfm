@@ -54,9 +54,9 @@ object fECUU: TfECUU
       Height = 21
       ComPort = ComPort
       ComProperty = cpPort
-      Text = 'COM1'
+      Text = ''
       Style = csDropDownList
-      ItemIndex = 1
+      ItemIndex = -1
       TabOrder = 0
       OnChange = cbPortChange
       OnDropDown = cbPortDropDown
@@ -87,7 +87,7 @@ object fECUU: TfECUU
         Height = 21
         Hint = 'RPM'
         TabOrder = 0
-        Text = '0,5'
+        Text = '100'
       end
       object eV2: TEdit
         Left = 12
@@ -96,7 +96,7 @@ object fECUU: TfECUU
         Height = 21
         Hint = 'Temp'
         TabOrder = 1
-        Text = '1,0'
+        Text = '200'
       end
       object eV3: TEdit
         Left = 12
@@ -105,7 +105,7 @@ object fECUU: TfECUU
         Height = 21
         Hint = 'fuel feedback'
         TabOrder = 2
-        Text = '2,0'
+        Text = '300'
       end
       object eV4: TEdit
         Left = 12
@@ -114,7 +114,7 @@ object fECUU: TfECUU
         Height = 21
         Hint = 'feedback_oil'
         TabOrder = 3
-        Text = '3,0'
+        Text = '400'
       end
       object eV5: TEdit
         Left = 12
@@ -123,7 +123,7 @@ object fECUU: TfECUU
         Height = 21
         Hint = 'R500 Stte'
         TabOrder = 4
-        Text = '4,0'
+        Text = '500'
       end
       object leAddr: TLabeledEdit
         Left = 12
@@ -134,7 +134,7 @@ object fECUU: TfECUU
         EditLabel.Height = 13
         EditLabel.Caption = 'Addr'
         TabOrder = 5
-        Text = '$A1'
+        Text = '$A0'
       end
       object leError: TLabeledEdit
         Left = 12

@@ -16,7 +16,7 @@ type
     head  : UInt16;
     addr   : UInt8;
     err   : UInt8;
-    data  : array [0..4] of Single;
+    data  : array [0..5] of UInt16;
     crc   : UInt8;
     tail  : UInt16;
     procedure prepare(aAddr: UInt8; aErr: UInt8; aData: array of UInt16);
@@ -51,13 +51,12 @@ begin
   addr  := aAddr;
   err   := aErr;
   crc := addr xor err;
-  for I := 0 to 4 do begin
+  for I := 0 to Length(aData)-1 do begin
     data[i] := aData[i];
   end;
-  for I := 0 to 19 do
+  for I := 0 to sizeof(data)-1 do
     crc := crc xor PByte( UInt32(@data[0])+i)^;
   tail := $FFFF;
-
 end;
 
 end.

@@ -111,7 +111,7 @@ end;
 
 procedure TfECUU.bTMClick(Sender: TObject);
 var
-  data: array [0..4] of UInt16;
+  data: array [0..5] of UInt16;
   pkt : TfvinTM;
 begin
 //  SetLength(data, 5);
